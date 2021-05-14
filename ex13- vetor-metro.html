@@ -29,11 +29,25 @@
 
         //for(let i = 0; i < estacoes.length; i++)
           //  document.write(estacoes[i])
-        for(let i = 0; i < estacoes.length; i++) {
+        
+        //Com Loop For
+          for(let i = 0; i < estacoes.length; i++) {
             // Escrevendo os nomes de cada carro EM MAIÚSCULAS, 
             // um por linha
             document.write(`Terminal ${i+1} : `+ estacoes[i]+ '<hr>')
         }
+    
+     document.write("<br>")
+
+        //Com ForEach
+        function imprimir(nome,indice) {
+           document.write(`Terminal ${indice +1}: ${nome}  <hr>`)
+        }
+        estacoes.forEach(imprimir)
+
+
+
+
 
     </script>
 </head>
