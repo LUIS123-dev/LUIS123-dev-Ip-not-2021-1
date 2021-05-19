@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página modelo</title>
+</head>
+<body>
+    <h1>Criação de elementos HTML via JavaScript</h1>
+    <p>Este arquivo demonstra como criar novos elementos HTML usando Javascript.</p>
+
+    <ul>
+        <li>Maçã</li>
+        <li>Banana</li>
+        <li>Uva</li>
+    </ul>
+
+    <script>
+        // Ativa verificações adicionais de variáveis
+        // Modo "chato" do JavaScript
+        'use strict'
+        
+        /*
+            A INTRODUÇÃO DE UM NOVO ELEMENTO NO HTML VIA JS ENVOLVE DUAS ETAPAS:
+            1) A criação do elemento, que é responsabilidade do proprietário (owner),
+               ou seja, do document.
+            2) A incorporação do novo elemento na estrutura DOM é responsabilidade do
+               pai (parent) do novo elemento.
+        */
+
+        // Criando um novo elemento (etapa 1)
+        const novoItem = document.createElement('li')
+
+        // Colocando conteúdo no novo elemento
+        novoItem.textContent = 'Laranja'
+
+        // Capturando o pai do novo elemento
+        
+        // Seleciona o primeiro (e único) elemento do tipo ul no documento
+        const lista = document.querySelector('ul')
+
+        // Incorporando o novo elemento como filho de seu pai (etapa 2)
+        lista.appendChild(novoItem)
+
+       
+    </script>
+</body>
+</html>
