@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página modelo</title>
+    <script>
+        // Ativa verificações adicionais de variáveis
+        // Modo "chato" do JavaScript
+        'use strict'
+ /* 1) Declare um objeto pet1 que representa um cão e preencha as seguintes propriedades?
+        -nome
+        -raça
+        - cor
+        -sexo
+        -nome do pai (nome da propriedade com espaçoes)
+        -nome da mãe (nome da propriedade com espaços) */
+
+       const pet1 = {nome:"Thor", raca: 'pitbull', cor: "Preto", sexo: "Masculino", 
+       "nome do pai": "Odin", "nome da mãe": "Atena"}
+
+       /*2) Crie um novo objeto pet2, copiando o primeiro:
+       let pet2 = pet1
+       E troque algumas características do pet2*/
+
+       /*let pet2 = pet1 // Duplicar assim não funciona(pois é só uma referência)
+       é preciso duplicar umas dasd propriedades em um novo objeto, para isso, podemos
+       usar a chamada "sintaxe de espalhamento"*/
+
+       //Vai gerar uma cópa de cada uma das propriedades de pet1 em pet2
+       let pet2 = {...pet1}
+        pet2.nome ="Loki"
+        pet2.raca = "pinscher"
+        pet2.cor = "Caramelo"
+        pet2["nome da mãe"] = "Medusa"
+
+        /*3) use dois for..in para lista os objetos: pet1 e pet2*/
+
+        for( let prop in pet1){
+            document.write(`${prop}: ${pet1[prop]}  <br>`)
+        }
+      
+        document.write("---------------------------<br>")
+        for( let prop in pet2){
+            document.write(`${prop}: ${pet2[prop]}  <br>`)
+        }
+       
+    </script>
+
+</head>
+<body>
+</body>
+</html>
